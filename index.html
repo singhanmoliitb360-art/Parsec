@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsec</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="space">
+      <div class="black-hole black-hole-one"></div>
+      <div class="black-hole black-hole-two"></div>
+      <div class="event-horizon ring ring-one"></div>
+      <div class="event-horizon ring ring-two"></div>
+      <div class="starfield"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="brand-wrap">
+        <h1>Parsec</h1>
+      </div>
+
+      <nav>
+        <button id="showProjectForm">New Project</button>
+        <button id="showProfileForm" class="secondary">My Profile</button>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">transform ambition into momentum</p>
+          <h2>Find the people who make bold ideas possible.</h2>
+          <p class="lead">
+            Parsec helps creators discover collaborators who match the skills, interests,
+            and energy needed to turn ambitious ideas into real projects.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="mini-stat">
+            <span class="stat-label">project fit</span>
+            <strong>92%</strong>
+          </div>
+          <div class="mini-stat">
+            <span class="stat-label">contributors</span>
+            <strong>124</strong>
+          </div>
+          <div class="mini-stat">
+            <span class="stat-label">momentum</span>
+            <strong>live</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="content-grid">
+        <section id="projectFormSection" class="panel">
+          <div class="panel-header">
+            <p class="eyebrow">launch idea</p>
+            <h2>Create Project</h2>
+          </div>
+
+          <form id="projectForm" class="stacked-form">
+            <label>Project title
+              <input type="text" id="projectTitle" required />
+            </label>
+
+            <label>Short description
+              <textarea id="projectDescription" rows="3" required></textarea>
+            </label>
+
+            <label>Needed skills (comma separated)
+              <input type="text" id="projectSkills" placeholder="design, frontend, product" required />
+            </label>
+
+            <label>Project interests (comma separated)
+              <input type="text" id="projectInterests" placeholder="games, storytelling, community" required />
+            </label>
+
+            <button type="submit">Save Project</button>
+          </form>
+        </section>
+
+        <section id="profileFormSection" class="panel hidden">
+          <div class="panel-header">
+            <p class="eyebrow">builder identity</p>
+            <h2>My Profile</h2>
+          </div>
+
+          <form id="profileForm" class="stacked-form">
+            <label>Name
+              <input type="text" id="profileName" required />
+            </label>
+
+            <label>Bio
+              <textarea id="profileBio" rows="3" required></textarea>
+            </label>
+
+            <label>Skills (comma separated)
+              <input type="text" id="profileSkills" placeholder="frontend, marketing, writing" required />
+            </label>
+
+            <label>Interests (comma separated)
+              <input type="text" id="profileInterests" placeholder="games, entrepreneurship, reading" required />
+            </label>
+
+            <button type="submit">Save Profile</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <p class="eyebrow">opportunities</p>
+            <h2>Projects</h2>
+          </div>
+          <div id="projectList"></div>
+        </section>
+
+        <section id="matchesPanel" class="panel">
+          <div class="panel-header">
+            <p class="eyebrow">best fits</p>
+            <h2>Matches</h2>
+          </div>
+          <div id="matchResults"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
